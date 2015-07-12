@@ -1,0 +1,37 @@
+{
+  "name": "bearer",
+  "description": "Returns rfc6750 OAuth Bearer Token from an http request object",
+  "version": "1.0.0",
+  "author": "Bret Comnes <bcomnes@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/bcomnes/bearer/issues"
+  },
+  "devDependencies": {
+    "portfinder": "^0.4.0",
+    "standard": "*",
+    "tap-spec": "^3.0.0",
+    "tape": "^4.0.0"
+  },
+  "homepage": "https://github.com/bcomnes/bearer",
+  "keywords": [
+    "authentication",
+    "bearer",
+    "bearertoken",
+    "oauth",
+    "rfc6750",
+    "token"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bcomnes/bearer.git"
+  },
+  "scripts": {
+    "test": "standard && tape test/*.js | tap-spec"
+  },
+  "dependencies": {
+    "auth-header": "^0.2.2",
+    "request": "^2.58.0"
+  }
+}
