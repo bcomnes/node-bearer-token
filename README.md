@@ -3,10 +3,10 @@
 [![npm][npm-image]][npm-url]
 [![travis][travis-image]][travis-url]
 
-[npm-image]: https://img.shields.io/npm/v/bearer.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/bearer
-[travis-image]: https://img.shields.io/travis/bcomnes/bearer.svg?style=flat-square
-[travis-url]: https://travis-ci.org/bcomnes/bearer
+[npm-image]: https://img.shields.io/npm/v/oauth/bearer.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/oauth/bearer
+[travis-image]: https://img.shields.io/travis/bcomnes/node-oauth-bearer.svg?style=flat-square
+[travis-url]: https://travis-ci.org/bcomnes/node-oauth-bearer
 
 Returns rfc6750 OAuth Bearer Token from an http request object
 
