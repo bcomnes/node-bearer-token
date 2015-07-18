@@ -23,7 +23,8 @@
     "rfc6750",
     "token",
     "micropub",
-    "indiauth"
+    "indiauth",
+    "rfc6750"
   ],
   "license": "ISC",
   "main": "index.js",
