@@ -11,7 +11,7 @@
 [coverage-image]: https://img.shields.io/codeclimate/coverage/github/bcomnes/node-bearer-token.svg?style=flat-square
 [coverage-url]: https://codeclimate.com/github/bcomnes/node-bearer-token
 
-Callback with a [rfc6750](https://tools.ietf.org/html/rfc6750) OAuth 2.0 Bearer Token from an http request object.
+Callback with a [rfc6750](https://tools.ietf.org/html/rfc6750) OAuth 2.0 Bearer Token from an http request object, ready for verification.
 
 ## Install
 
