@@ -7,6 +7,7 @@
     "url": "https://github.com/bcomnes/bearer/issues"
   },
   "devDependencies": {
+    "codeclimate-test-reporter": "^0.1.0",
     "istanbul": "^0.3.17",
     "portfinder": "^0.4.0",
     "standard": "*",
@@ -33,7 +34,8 @@
   "scripts": {
     "test": "tape test/*.js | tap-spec ; standard",
     "cover": "istanbul cover tape test/*.js | tap-spec ; standard",
-    "submitCover": "cat coverage/lcov.info | codeclimate"
+    "submitCover": "cat coverage/lcov.info | codeclimate",
+    "travis": "npm test && npm run submitCover"
   },
   "dependencies": {
     "auth-header": "^0.2.2",
