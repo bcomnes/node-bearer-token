@@ -16,7 +16,7 @@ Callback with a [rfc6750](https://tools.ietf.org/html/rfc6750) OAuth 2.0 Bearer 
 ## Install
 
 ```
-npm install bearer
+npm install bearer-token
 ```
 
 ## Example
