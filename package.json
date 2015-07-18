@@ -35,7 +35,7 @@
     "test": "tape test/*.js | tap-spec ; standard",
     "cover": "istanbul cover tape test/*.js | tap-spec ; standard",
     "submitCover": "codeclimate-test-reporter < coverage/lcov.info",
-    "travis": "npm test && npm run submitCover"
+    "travis": "npm cover && npm run submitCover"
   },
   "dependencies": {
     "auth-header": "^0.2.2",
