@@ -1,7 +1,7 @@
 {
   "name": "bearer-token",
   "description": "Returns rfc6750 OAuth Bearer Token from an http request object",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Bret Comnes <bcomnes@gmail.com>",
   "bugs": {
     "url": "https://github.com/bcomnes/node-bearer-token"
