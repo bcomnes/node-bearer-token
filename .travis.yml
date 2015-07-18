@@ -2,5 +2,8 @@ language: node_js
 node_js:
   - 'iojs'
 sudo: false
+cache:
+  directories:
+    - node_modules
 script:
   - npm run travis
