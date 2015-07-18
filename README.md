@@ -26,9 +26,8 @@ var bearerToken = require('bearer-token')
 var http = require('http')
 
 server = http.createServer()
-server.listen(port, function () {
-  t.pass('server started on ' + port)
-  t.end()
+server.listen(8000, function () {
+  console.log('server started on 8000')
 })
 
 server.on('request', function(req ,res) {
