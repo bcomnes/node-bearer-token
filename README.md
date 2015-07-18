@@ -49,8 +49,8 @@ Pass in a standard `http` `reuest` object to extract a single bearer token from 
 ### `bearerToken(req, callback)`
 
 - `req` Accepts a standard [`http` request object](https://nodejs.org/api/http.html#http_http_incomingmessage).  The request header and body are parsed in search of a bearer token.  Tokens found in the request header take precidence over tokens in the body.
-- `callback` Function is called with any errors and a token if found.  A missing token is not grounds for an error (only parsing or unexpected errors).
-  - `error` Error object
+- `callback(error, token)` Function is called with any errors and a token if found.  A missing token is not grounds for an error (only parsing or unexpected errors).
+  - `error` Error object if anything bad happened.
   - `token` String if a token is found.  You still need to verify it.
 
 ## Contributing
