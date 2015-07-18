@@ -7,6 +7,7 @@
     "url": "https://github.com/bcomnes/bearer/issues"
   },
   "devDependencies": {
+    "istanbul": "^0.3.17",
     "portfinder": "^0.4.0",
     "standard": "*",
     "tap-spec": "^3.0.0",
@@ -30,11 +31,14 @@
     "url": "https://github.com/bcomnes/bearer.git"
   },
   "scripts": {
-    "test": "standard && tape test/*.js | tap-spec"
+    "test": "tape test/*.js | tap-spec ; standard",
+    "cover": "istanbul cover tape test/*.js | tap-spec ; standard",
+    "submitCover": "cat coverage/lcov.info | codeclimate"
   },
   "dependencies": {
     "auth-header": "^0.2.2",
     "body": "^5.1.0",
+    "process-nextick-args": "^1.0.2",
     "request": "^2.58.0"
   }
 }
