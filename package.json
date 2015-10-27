@@ -12,7 +12,8 @@
     "portfinder": "^0.4.0",
     "standard": "*",
     "tap-spec": "^3.0.0",
-    "tape": "^4.0.0"
+    "tape": "^4.0.0",
+    "snazzy": "^2.0.1"
   },
   "homepage": "https://github.com/bcomnes/node-bearer-token",
   "keywords": [
@@ -34,7 +35,7 @@
   },
   "scripts": {
     "test": "tape test/*.js | tap-spec ; standard",
-    "cover": "istanbul cover tape test/*.js | tap-spec ; standard",
+    "cover": "istanbul cover tape test/*.js | tap-spec && standard | snazzy",
     "submitCover": "codeclimate-test-reporter < coverage/lcov.info",
     "travis": "npm run cover && npm run submitCover"
   },
