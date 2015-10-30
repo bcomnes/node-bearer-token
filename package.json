@@ -8,12 +8,14 @@
   },
   "devDependencies": {
     "codeclimate-test-reporter": "^0.1.0",
-    "istanbul": "^0.3.17",
+    "express": "^4.13.3",
+    "istanbul": "^0.4.0",
     "portfinder": "^0.4.0",
     "snazzy": "^2.0.1",
     "standard": "^5.3.1",
-    "tap-spec": "^3.0.0",
-    "tape": "^4.0.0"
+    "tap-spec": "^4.1.0",
+    "tape": "^4.0.0",
+    "request": "^2.58.0"
   },
   "homepage": "https://github.com/bcomnes/node-bearer-token",
   "keywords": [
@@ -42,7 +44,6 @@
   "dependencies": {
     "auth-header": "^0.2.2",
     "body": "^5.1.0",
-    "process-nextick-args": "^1.0.2",
-    "request": "^2.58.0"
+    "process-nextick-args": "^1.0.2"
   }
 }

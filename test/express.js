@@ -1,21 +1,24 @@
 var test = require('tape')
 var request = require('request')
-var http = require('http')
 var portfinder = require('portfinder')
+var express = require('express')
+var http = require('http')
 
 var authBody = require('../lib/authBody')
 var fakeBearer = require('../lib/fakeBearer')
 
 var port
 var server
+var app
 
-test('start authBody server', function (t) {
+test('start express server', function (t) {
   portfinder.getPort(function (err, freePort) {
     if (err) return console.error(err)
     port = freePort
-    server = http.createServer()
+    app = express()
+    server = http.createServer(app)
     server.listen(port, function () {
-      t.pass('server started on ' + port)
+      t.pass('express server started on ' + port)
       t.end()
     })
   })
@@ -41,19 +44,18 @@ test('get bearer token from request body', function (t) {
     })
   }
 
-  server.on('request', handler)
+  app.post('/', handler)
 
   request(authReq, function (err, res, body) {
     t.error(err, 'no err on request')
-    server.removeListener('request', handler)
     t.end()
   })
 })
 
-test('do not return auth header when missing', function (t) {
+test('do not return auth token when missing', function (t) {
   var authReq = {
     method: 'POST',
-    uri: 'http://localhost:' + port,
+    uri: 'http://localhost:' + port + '/missing',
     form: {
       key: 'value'
     }
@@ -68,7 +70,7 @@ test('do not return auth header when missing', function (t) {
     })
   }
 
-  server.on('request', handler)
+  app.post('/missing', handler)
 
   request(authReq, function (err, res, body) {
     t.equal(res.statusCode, 400, 'missing status code returns 400')
@@ -78,32 +80,7 @@ test('do not return auth header when missing', function (t) {
   })
 })
 
-test('do not return auth header when not urlencoded', function (t) {
-  var authReq = {
-    method: 'POST',
-    uri: 'http://localhost:' + port
-  }
-
-  var handler = function (req, res) {
-    authBody(req, function (err, token) {
-      t.error(err, 'body token parsed without error')
-      t.equal(token, undefined, 'should not return a bearer token')
-      res.statusCode = 400
-      res.end()
-    })
-  }
-
-  server.on('request', handler)
-
-  request(authReq, function (err, res, body) {
-    t.equal(res.statusCode, 400, 'missing status code returns 400')
-    t.error(err, 'no err on request')
-    server.removeListener('request', handler)
-    t.end()
-  })
-})
-
-test('stop authHeader server', function (t) {
+test('stop express server', function (t) {
   server.close(function () {
     t.pass('server stopped')
     t.end()

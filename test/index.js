@@ -86,7 +86,6 @@ test('get bearer token from request body', function (t) {
   }
 
   var handler = function (req, res) {
-    console.log(req.headers)
     bearer(req, function (err, token) {
       t.error(err, 'no errors when finding body token')
       t.equal(token, testToken, 'should get bearer token from header')
@@ -149,7 +148,6 @@ test('headerToken beats bodyToken', function (t) {
   }
 
   var handler = function (req, res) {
-    console.log(req.headers)
     bearer(req, function (err, token) {
       t.error(err, 'no errors when finding token')
       t.equal(token, headerToken, 'should get bearer token from header')
@@ -176,7 +174,6 @@ test('bearer is async, even when its not', function (t) {
   }
 
   var handler = function (req, res) {
-    console.log(req.headers)
     bearer(req, function (err, token) {
       t.error(err, 'no errors when finding token')
       dontOverwrite = overWriteToken
