@@ -49,7 +49,6 @@ test('get auth header from request', function (t) {
     server.removeListener('request', handler)
     t.end()
   })
-
 })
 
 test('do not return auth header when missing', function (t) {

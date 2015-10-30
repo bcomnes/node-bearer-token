@@ -49,7 +49,6 @@ test('get bearer token from request body', function (t) {
     server.removeListener('request', handler)
     t.end()
   })
-
 })
 
 test('do not return auth header when missing', function (t) {
