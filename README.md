@@ -56,6 +56,12 @@ Pass in a standard `http` `reuest` object to extract a single bearer token from 
 
 Contributions welcome! Please read the [contributing guidelines](CONTRIBUTING.md) first.
 
+## Contributors
+
+<table><tbody><tr><th align="left">bcomnes</th><td><a href="https://github.com/bcomnes">GitHub/bcomnes</a></td></tr>
+<tr><th align="left">wpacks</th><td><a href="https://github.com/wpacks">GitHub/wpacks</a></td></tr>
+</tbody></table>
+
 ## License
 
 [ISC](LICENSE.md)
