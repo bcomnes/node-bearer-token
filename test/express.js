@@ -2,6 +2,7 @@ var test = require('tape')
 var request = require('request')
 var portfinder = require('portfinder')
 var express = require('express')
+var bodyParser = require('body-parser')
 var http = require('http')
 
 var authBody = require('../lib/authBody')
@@ -16,6 +17,7 @@ test('start express server', function (t) {
     if (err) return console.error(err)
     port = freePort
     app = express()
+    app.use(bodyParser.urlencoded({ extended: false }))
     server = http.createServer(app)
     server.listen(port, function () {
       t.pass('express server started on ' + port)
