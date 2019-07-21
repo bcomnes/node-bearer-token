@@ -8,9 +8,7 @@
   },
   "devDependencies": {
     "body-parser": "^1.14.1",
-    "codeclimate-test-reporter": "^0.4.1",
     "express": "^4.13.3",
-    "istanbul": "^0.4.0",
     "portfinder": "^1.0.13",
     "request": "^2.58.0",
     "snazzy": "^8.0.0",
@@ -37,14 +35,11 @@
     "url": "https://github.com/bcomnes/node-bearer-token"
   },
   "scripts": {
-    "test": "tape test/*.js | tap-spec && standard | snazzy",
-    "cover": "istanbul cover tape test/*.js | tap-spec && standard | snazzy",
-    "submitCover": "codeclimate-test-reporter < coverage/lcov.info",
-    "travis": "npm run cover && npm run submitCover"
+    "test": "tape test/*.js | tap-spec && standard | snazzy"
   },
   "dependencies": {
     "auth-header": "^1.0.0",
     "body": "^5.1.0",
-    "process-nextick-args": "^1.0.2"
+    "process-nextick-args": "^2.0.0"
   }
 }
