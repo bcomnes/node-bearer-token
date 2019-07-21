@@ -2,14 +2,11 @@
 
 [![npm][npm-image]][npm-url]
 [![travis][travis-image]][travis-url]
-[![coverage][coverage-image]][coverage-url]
 
 [npm-image]: https://img.shields.io/npm/v/bearer-token.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/bearer-token
 [travis-image]: https://img.shields.io/travis/bcomnes/node-bearer-token.svg?style=flat-square
 [travis-url]: https://travis-ci.org/bcomnes/node-bearer-token
-[coverage-image]: https://img.shields.io/codeclimate/coverage/github/bcomnes/node-bearer-token.svg?style=flat-square
-[coverage-url]: https://codeclimate.com/github/bcomnes/node-bearer-token
 
 Callback with a [rfc6750](https://tools.ietf.org/html/rfc6750) OAuth 2.0 Bearer Token from an http request object, ready for verification.
 
